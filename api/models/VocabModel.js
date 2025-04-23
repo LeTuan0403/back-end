@@ -10,7 +10,8 @@ const vocabSchema = new mongoose.Schema({
         maxLength: 30
     }},
     {
-        versionKey: false
+        versionKey: false,
+        timestamps: true 
     }
 )
 const vocabModel = mongoose.model("vocabs", vocabSchema)

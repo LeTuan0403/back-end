@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
 const mongoose = require ('mongoose')
-const db = "mongodb+srv://001343226:PsvnmUAoFY6HaUIU@mydbcluster0.9j1of.mongodb.net/vocab-builder"
+const db = "mongodb+srv://001343226:PsvnmUAoFY6HaUIU@mydbcluster0.9j1of.mongodb.net/vocab-builde"
 mongoose.connect(db)
     .then(() => console.log('success'))
 .catch((err) => console.error('failure: ' + err))
