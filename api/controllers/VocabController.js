@@ -29,7 +29,7 @@ const viewVocabById = async (req, res) => {
 const addNewVocab = async (req, res) => {
     try {
         // Create a new vocab document using request body
-        const vocabs = await vocabModel.create(req.body).sort({_id : -1})
+        const vocabs = await vocabModel.create(req.body)
         // Respond with created vocab and success message
         res.status(201).json({vocabs, message : 'Add vocab succeed !'})
     } catch (err) {

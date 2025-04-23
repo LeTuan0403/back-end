@@ -3,7 +3,6 @@ const vocabSchema = new mongoose.Schema({
 
     //declare filed name + type +validation
     english : String,
-    german: String,
     german:{
         type: String,
         required: [true, "german word can not be empty"],

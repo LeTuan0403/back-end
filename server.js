@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
 const mongoose = require ('mongoose')
-const db = "mongodb+srv://001343226:PsvnmUAoFY6HaUIU@mydbcluster0.9j1of.mongodb.net/?retryWrites=true&w=majority&appName=MyDBCluster0"
+const db = "mongodb+srv://001343226:PsvnmUAoFY6HaUIU@mydbcluster0.9j1of.mongodb.net/vocab-builder"
 mongoose.connect(db)
     .then(() => console.log('success'))
 .catch((err) => console.error('failure: ' + err))
@@ -19,7 +19,7 @@ router(app)
 app.get('/demo', (req, res) => {
     res.send("<h1>Demo Page</h1>")
 })
-const port = process.env.PORT || 1108
+const port = process.env.PORT || 1108;
 app.listen(port, () => {
     console.log("Sever started at http://localhost:" + port)
 })
